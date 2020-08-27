@@ -353,22 +353,22 @@ bool BLEServer::connect(BLEAddress address) {
 
 
 void BLEServerCallbacks::onConnect(BLEServer* pServer) {
-	log_d("BLEServerCallbacks", ">> onConnect(): Default");
-	log_d("BLEServerCallbacks", "Device: %s", BLEDevice::toString().c_str());
-	log_d("BLEServerCallbacks", "<< onConnect()");
+	log_d(">> onConnect(): Default");
+	log_d("Device: %s", BLEDevice::toString().c_str());
+	log_d("<< onConnect()");
 } // onConnect
 
 void BLEServerCallbacks::onConnect(BLEServer* pServer, esp_ble_gatts_cb_param_t* param) {
-	log_d("BLEServerCallbacks", ">> onConnect(): Default");
-	log_d("BLEServerCallbacks", "Device: %s", BLEDevice::toString().c_str());
-	log_d("BLEServerCallbacks", "<< onConnect()");
+	log_d(">> onConnect(): Default");
+	log_d("Device: %s", BLEDevice::toString().c_str());
+	log_d("<< onConnect()");
 } // onConnect
 
 
 void BLEServerCallbacks::onDisconnect(BLEServer* pServer) {
-	log_d("BLEServerCallbacks", ">> onDisconnect(): Default");
-	log_d("BLEServerCallbacks", "Device: %s", BLEDevice::toString().c_str());
-	log_d("BLEServerCallbacks", "<< onDisconnect()");
+	log_d(">> onDisconnect(): Default");
+	log_d("Device: %s", BLEDevice::toString().c_str());
+	log_d("<< onDisconnect()");
 } // onDisconnect
 
 /* multi connect support */

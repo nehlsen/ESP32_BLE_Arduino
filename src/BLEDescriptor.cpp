@@ -204,7 +204,8 @@ void BLEDescriptor::handleGATTServerEvent(
  * @param [in] pCallbacks An instance of a callback structure used to define any callbacks for the descriptor.
  */
 void BLEDescriptor::setCallbacks(BLEDescriptorCallbacks* pCallback) {
-	log_v(">> setCallbacks: 0x%x", (uint32_t) pCallback);
+//	log_v(">> setCallbacks: 0x%x", (uint32_t) pCallback);
+	log_v(">> setCallbacks: XXXXX");
 	m_pCallback = pCallback;
 	log_v("<< setCallbacks");
 } // setCallbacks
@@ -269,8 +270,8 @@ BLEDescriptorCallbacks::~BLEDescriptorCallbacks() {}
  * @param [in] pDescriptor The descriptor that is the source of the event.
  */
 void BLEDescriptorCallbacks::onRead(BLEDescriptor* pDescriptor) {
-	log_d("BLEDescriptorCallbacks", ">> onRead: default");
-	log_d("BLEDescriptorCallbacks", "<< onRead");
+	log_d(">> onRead: default");
+	log_d("<< onRead");
 } // onRead
 
 
@@ -279,8 +280,8 @@ void BLEDescriptorCallbacks::onRead(BLEDescriptor* pDescriptor) {
  * @param [in] pDescriptor The descriptor that is the source of the event.
  */
 void BLEDescriptorCallbacks::onWrite(BLEDescriptor* pDescriptor) {
-	log_d("BLEDescriptorCallbacks", ">> onWrite: default");
-	log_d("BLEDescriptorCallbacks", "<< onWrite");
+	log_d(">> onWrite: default");
+	log_d("<< onWrite");
 } // onWrite
 
 

@@ -368,12 +368,12 @@ void BLEAdvertisementData::setFlags(uint8_t flag) {
  * @param [in] data Manufacturer data.
  */
 void BLEAdvertisementData::setManufacturerData(std::string data) {
-	log_d("BLEAdvertisementData", ">> setManufacturerData");
+	log_d(">> setManufacturerData");
 	char cdata[2];
 	cdata[0] = data.length() + 1;
 	cdata[1] = ESP_BLE_AD_MANUFACTURER_SPECIFIC_TYPE;  // 0xff
 	addData(std::string(cdata, 2) + data);
-	log_d("BLEAdvertisementData", "<< setManufacturerData");
+	log_d("<< setManufacturerData");
 } // setManufacturerData
 
 
@@ -382,12 +382,12 @@ void BLEAdvertisementData::setManufacturerData(std::string data) {
  * @param [in] The complete name of the device.
  */
 void BLEAdvertisementData::setName(std::string name) {
-	log_d("BLEAdvertisementData", ">> setName: %s", name.c_str());
+	log_d(">> setName: %s", name.c_str());
 	char cdata[2];
 	cdata[0] = name.length() + 1;
 	cdata[1] = ESP_BLE_AD_TYPE_NAME_CMPL;  // 0x09
 	addData(std::string(cdata, 2) + name);
-	log_d("BLEAdvertisementData", "<< setName");
+	log_d("<< setName");
 } // setName
 
 
@@ -471,12 +471,12 @@ void BLEAdvertisementData::setServiceData(BLEUUID uuid, std::string data) {
  * @param [in] The short name of the device.
  */
 void BLEAdvertisementData::setShortName(std::string name) {
-	log_d("BLEAdvertisementData", ">> setShortName: %s", name.c_str());
+	log_d(">> setShortName: %s", name.c_str());
 	char cdata[2];
 	cdata[0] = name.length() + 1;
 	cdata[1] = ESP_BLE_AD_TYPE_NAME_SHORT;  // 0x08
 	addData(std::string(cdata, 2) + name);
-	log_d("BLEAdvertisementData", "<< setShortName");
+	log_d("<< setShortName");
 } // setShortName
 
 
