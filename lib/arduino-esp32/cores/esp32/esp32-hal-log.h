@@ -1,6 +1,7 @@
 #ifndef __ARDUHAL_LOG_H__
 #define __ARDUHAL_LOG_H__
 
+//#define LOG_LOCAL_LEVEL ESP_LOG_VERBOSE
 #include "esp_log.h"
 
 #define log_e(format, ...) ESP_LOGE(__FILE__, format, ##__VA_ARGS__)
